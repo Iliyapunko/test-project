@@ -1,6 +1,5 @@
 import React, { ChangeEvent, FC, useEffect, useState } from 'react'
 import { InputProps } from 'types'
-import toNumber from 'lodash/toNumber'
 
 const Input: FC<InputProps> = ({ outsideValue, onChange }) => {
   const [value, setValue] = useState(outsideValue)

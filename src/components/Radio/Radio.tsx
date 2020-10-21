@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RadioProps } from 'types'
 import RadioButton from './RadioButton'
 import noop from 'lodash/noop'

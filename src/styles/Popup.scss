@@ -10,47 +10,50 @@
   position: relative;
   margin-left: 5px;
 
-  &__i {
+  &__cross {
+    position: relative;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+
+    &--selected {
+      .popup__left_cross {
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 9px;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      .popup__right_cross {
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 9px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
   }
 
-  &__dot {
+  &__left_cross {
+    position: absolute;
+    background: var(--gray);
     width: 2px;
     height: 2px;
     border-radius: 50%;
-    background: var(--gray);
-    margin-bottom: 2px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all .5s;
   }
 
-  &__line {
+  &__right_cross {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 2px;
     height: 7px;
     background: var(--gray);
-  }
-
-  &__x {
-    position: relative;
-  }
-
-  &__cross {
-    width: 2px;
-    height: 9px;
-    background: var(--gray);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-
-    &--left {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    &--right {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
+    transition: all .5s;
   }
 }
 
@@ -63,7 +66,7 @@
   &__tail {
     width: 10px;
     height: 24px;
-    background: linear-gradient(60deg, var(--violet) 50%, rgba(0,0,0,0) 50%);
+    background: linear-gradient(60deg, var(--violet) 50%, rgba(0, 0, 0, 0) 50%);
   }
 
   &__body {
@@ -73,6 +76,5 @@
     background: var(--violet);
     color: var(--white);
     font-size: 0.85em;
-
   }
 }

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { RadioButtonProps } from 'types'
 import classnames from 'classnames'
 import Popup from 'components/Popup'

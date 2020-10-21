@@ -33,7 +33,6 @@ export interface RadioButtonProps<T> {
 }
 
 export interface SwitchProps {
-  id: string
   state?: boolean
   leftText?: string
   rightText: string

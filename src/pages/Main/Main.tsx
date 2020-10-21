@@ -103,7 +103,6 @@ export default class Main extends PureComponent<MainProps, MainState> {
         <span className="main__title">{t('main:summary')}</span>
         <Radio<RADIO_BUTTONS> buttons={getRadioButtons()} onChange={handleRadioChange} />
         <Switch
-          id="custom-switch"
           leftText={t('main:withTax')}
           rightText={t('main:withoutTax')}
           onChange={handleSwitchChange}

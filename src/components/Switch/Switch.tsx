@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import { SwitchProps } from 'types'
 import noop from 'lodash/noop'
 import classnames from 'classnames'
-const Switch: FC<SwitchProps> = ({ state = true, leftText = '', rightText, onChange = noop, id }) => {
+const Switch: FC<SwitchProps> = ({ state = true, leftText = '', rightText, onChange = noop }) => {
   const [checked, setChecked] = useState(state)
 
   const handleSwitchChange = () => {

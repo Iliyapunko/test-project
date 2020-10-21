@@ -8,7 +8,7 @@ const Popup: FC<PopupProps> = ({ text }) => {
 
   const crossClassName = classnames({
     'popup__cross': true,
-    'popup__cross--selected': selected
+    'popup__cross--selected': selected,
   })
 
   const handleClick = () => {
@@ -30,18 +30,10 @@ const Popup: FC<PopupProps> = ({ text }) => {
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
     >
-      {!selected && (
-        <div className="popup__i">
-          <div className="popup__dot"></div>
-          <div className="popup__line"></div>
-        </div>
-      )}
-      {selected && (
-        <div className="popup__cross">
-          <div className="popup__cross popup__cross--left"></div>
-          <div className="popup__cross popup__cross--right"></div>
-        </div>
-      )}
+      <div className={crossClassName}>
+        <div className="popup__left_cross"></div>
+        <div className="popup__right_cross"></div>
+      </div>
       {(mouseOver || selected) && (
         <div className="popup_modal">
           <div className="popup_modal__tail"></div>
