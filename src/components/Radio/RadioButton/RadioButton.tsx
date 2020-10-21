@@ -11,7 +11,7 @@ function RadioButton<T extends string>({
   description,
 }: RadioButtonProps<T>) {
   const buttonClassName = classnames({
-    'radioButton__button': true,
+    radioButton__button: true,
     'radioButton__button--checked': checked,
   })
 

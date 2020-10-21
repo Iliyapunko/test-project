@@ -42,7 +42,7 @@
     top: 20%;
     left: 50%;
     transform: translate(-50%, 0);
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   &__right_cross {
@@ -53,7 +53,7 @@
     width: 2px;
     height: 7px;
     background: var(--gray);
-    transition: all .5s;
+    transition: all 0.5s;
   }
 }
 

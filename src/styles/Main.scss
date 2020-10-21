@@ -1,18 +1,15 @@
 .main {
-
   &__title {
     font-size: 0.7em;
     color: var(--gray);
   }
 
-
   .summary {
-    
     background: var(--yellow-background);
     padding: 15px;
     width: max-content;
     margin-top: 30px;
-    
+
     > p {
       margin: 5px;
 

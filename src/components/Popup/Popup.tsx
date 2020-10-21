@@ -7,7 +7,7 @@ const Popup: FC<PopupProps> = ({ text }) => {
   const [selected, setSelected] = useState(false)
 
   const crossClassName = classnames({
-    'popup__cross': true,
+    popup__cross: true,
     'popup__cross--selected': selected,
   })
 

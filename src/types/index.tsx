@@ -1,6 +1,6 @@
 import { TFunction } from 'i18next'
 import { ActionFunctionAny, Action } from 'redux-actions'
-import { MainSelector } from 'pages/Main/selector'  
+import { MainSelector } from 'pages/Main/selector'
 
 export interface MainProps extends MainSelector {
   t: TFunction

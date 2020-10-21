@@ -16,12 +16,11 @@ import App from './App'
 
 ReactDOM.render(
   <I18nextProvider i18n={i18n}>
-      <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <App />
-        </ConnectedRouter>
-      </Provider>
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <App />
+      </ConnectedRouter>
+    </Provider>
   </I18nextProvider>,
   document.getElementById('root'),
 )
-

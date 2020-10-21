@@ -8,7 +8,7 @@ const Main = React.lazy(() => import('pages/Main'))
 const Router = () => (
   <Suspense fallback={null}>
     <Switch>
-      <Redirect exact from='/' to={Routes.MAIN} />
+      <Redirect exact from="/" to={Routes.MAIN} />
       <Route exact path={Routes.MAIN} component={Main} />
     </Switch>
   </Suspense>

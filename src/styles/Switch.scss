@@ -3,7 +3,7 @@
   --width: 30px;
   --height: 17px;
   --sliderHeight: 15px;
-  --leftPosition: calc((var( --height) - var(--sliderHeight)) / 2);
+  --leftPosition: calc((var(--height) - var(--sliderHeight)) / 2);
   --rightPosition: calc(var(--width) - var(--sliderHeight) - var(--leftPosition));
   --currentPosition: var(--leftPosition);
   --selectedText: var(--black);
@@ -45,7 +45,7 @@
     border-radius: 50%;
     background: var(--white);
     transition-property: left;
-    transition: .3s linear;
+    transition: 0.3s linear;
   }
 
   &--checked {

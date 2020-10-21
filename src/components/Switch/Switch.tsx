@@ -11,18 +11,21 @@ const Switch: FC<SwitchProps> = ({ state = true, leftText = '', rightText, onCha
     onChange(newState)
   }
 
-  const switchClassName = classnames('switch', {'switch--checked': checked})
+  const switchClassName = classnames('switch', { 'switch--checked': checked })
 
   return (
     <div className={switchClassName} onClick={handleSwitchChange}>
-      <span onClick={handleSwitchChange} className='switch__text switch__text--left'>{leftText}</span>
+      <span onClick={handleSwitchChange} className="switch__text switch__text--left">
+        {leftText}
+      </span>
 
-      <div className='switch__button'>
-        <div className='switch__slider'>
-        </div>
+      <div className="switch__button">
+        <div className="switch__slider"></div>
       </div>
 
-      <span onClick={handleSwitchChange} className='switch__text switch__text--right'>{rightText}</span>
+      <span onClick={handleSwitchChange} className="switch__text switch__text--right">
+        {rightText}
+      </span>
     </div>
   )
 }

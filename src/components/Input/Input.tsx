@@ -14,9 +14,7 @@ const Input: FC<InputProps> = ({ outsideValue, onChange }) => {
     onChange(newValue)
   }
 
-  return (
-    <input className="input" type='text' value={value} onChange={handleChange}/>
-  )
+  return <input className="input" type="text" value={value} onChange={handleChange} />
 }
 
 export default Input
