@@ -1,0 +1,64 @@
+.switch {
+  --background: var(--gray);
+  --width: 30px;
+  --height: 17px;
+  --sliderHeight: 15px;
+  --leftPosition: calc((var( --height) - var(--sliderHeight)) / 2);
+  --rightPosition: calc(var(--width) - var(--sliderHeight) - var(--leftPosition));
+  --currentPosition: var(--leftPosition);
+  --selectedText: var(--black);
+  --unselectedText: var(--gray);
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  & > * {
+    margin: 10px;
+  }
+
+  .switch__text {
+    &--left {
+      color: var(--selectedText);
+    }
+    &--right {
+      color: var(--unselectedText);
+    }
+  }
+
+  .switch__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+    background: var(--background);
+    border-radius: calc(var(--height) / 2);
+  }
+
+  .switch__slider {
+    position: relative;
+    left: var(--currentPosition);
+    height: var(--sliderHeight);
+    width: var(--sliderHeight);
+    border-radius: 50%;
+    background: var(--white);
+    transition-property: left;
+    transition: .3s linear;
+  }
+
+  &--checked {
+    --currentPosition: var(--rightPosition);
+    --background: var(--yellow);
+
+    .switch__text {
+      &--left {
+        color: var(--unselectedText);
+      }
+      &--right {
+        color: var(--selectedText);
+      }
+    }
+  }
+}

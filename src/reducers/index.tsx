@@ -1,10 +1,20 @@
 import { combineReducers } from 'redux'
-import { connectRouter } from 'connected-react-router'
+import { connectRouter, RouterState, RouterAction } from 'connected-react-router'
 import { History } from 'history'
-import main from './main'
+import main, { MainState, MainActions } from './main'
 
-export default (history: History) => combineReducers({
-  router: connectRouter(history),
+export type State = {
+  router: RouterState
+  main: MainState
+}
 
-  main
-})
+type Actions = MainActions & RouterAction
+
+const state = (history: History) =>
+  combineReducers<State, Actions>({
+    router: connectRouter(history),
+
+    main,
+  })
+
+export default state

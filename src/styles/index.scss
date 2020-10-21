@@ -1,1 +1,20 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./Radio.scss";
+@import "./RadioButton.scss";
+@import "./Switch.scss";
+@import "./Popup.scss";
+@import "./Input.scss";
+@import "./Main.scss";
+
+body {
+  padding: 30px;
+}
+
+:root {
+  --black: black;
+  --white: white;
+  --gray: #aaa;
+  --yellow: #ebce2e;
+  --violet: #6170af;
+  --yellow-background: #fffab6;
+}

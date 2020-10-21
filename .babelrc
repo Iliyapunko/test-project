@@ -1,9 +1,5 @@
 {
   "presets": [
-    "babel-preset-react-app",
-    "@emotion/babel-preset-css-prop"
-  ],
-  "plugins": [
-    "emotion"
+    "babel-preset-react-app"
   ]
 }

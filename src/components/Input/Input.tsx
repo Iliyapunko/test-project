@@ -1,11 +1,23 @@
-import React from 'react'
-import { css } from '@emotion/core'
+import React, { ChangeEvent, FC, useEffect, useState } from 'react'
+import { InputProps } from 'types'
+import toNumber from 'lodash/toNumber'
 
-const style = () => css`
-`
+const Input: FC<InputProps> = ({ outsideValue, onChange }) => {
+  const [value, setValue] = useState(outsideValue)
 
-const Input = () => {
-  return <div></div>
+  useEffect(() => {
+    if (outsideValue !== value) setValue(outsideValue)
+  }, [outsideValue])
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseFloat(e.target.value) || 0
+    setValue(newValue)
+    onChange(newValue)
+  }
+
+  return (
+    <input className="input" type='text' value={value} onChange={handleChange}/>
+  )
 }
 
 export default Input

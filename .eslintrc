@@ -15,5 +15,6 @@
   "rules": {
     "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/camelcase": 0
   }
 }
